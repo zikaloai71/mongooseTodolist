@@ -1,0 +1,30 @@
+{{>header}}
+{{>nav}}
+
+{{#if noUsers}}
+<div class="my-3 container alert alert-danger"> no data</div>
+{{else}}
+ <section class="d-flex my-3 flex-wrap container  justify-content-between">
+        {{#each result}}
+        {{#if activeStatus}}
+        <div class="  alert alert-success">
+            <div>task name :{{this.title}}</div>
+            <div>due date:{{this.date}}</div>
+            <div>priority: on</div>
+            
+       {{else}}
+          <div class="   alert  alert-danger">
+            <div>user Name:{{this.task}}</div>
+            <div>due date:{{this.date}}</div>
+            <div>priority: off</div>
+            
+       {{/if}}
+        <div class="d-flex  justify-content-between">
+                <a href="/delete/{{this._id}}" class=" btn btn-danger">Delete</a>
+                <a href="/activity/{{this._id}}" class=" btn btn-dark">toggle</a>
+            </div>
+        </div>
+        {{/each}}
+</section>
+
+{{/if}}

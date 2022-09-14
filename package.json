@@ -1,0 +1,26 @@
+{
+  "name": "mongoosetodolist",
+  "version": "1.0.0",
+  "description": "mongoose train",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zikaloai71/mongooseTodolist.git"
+  },
+  "author": "zakaria loai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zikaloai71/mongooseTodolist/issues"
+  },
+  "homepage": "https://github.com/zikaloai71/mongooseTodolist#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.6.0",
+    "validator": "^13.7.0"
+  }
+}

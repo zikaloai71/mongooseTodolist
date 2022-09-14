@@ -1,0 +1,27 @@
+{{>header}}
+{{>nav}}
+<form action="/getAddLogic" class="container my-3">
+
+  <div class="form-group">
+    <input class="my-1 form-control" name='title' value="{{user.title}}" placeholder="Enter todo name">
+  </div>
+  {{#if errorMessage.errors.title}}
+  <div class="container alert alert-danger">{{errorMessage}}</div>
+  {{/if}}
+
+   <div class="form-group">
+    <input  class="my-1 form-control" name='date' value= "{{user.date}}"  placeholder="YYYY/MM/DD">
+  </div>
+  {{#if errorMessage.errors.date}}
+  <div class="container alert alert-danger">{{errorMessage}}</div>
+  {{/if}}
+  <div class="form-check form-switch">
+  <input name="activeStatus" class="my-1 form-check-input" type="checkbox" role="switch"  id="flexSwitchCheckDefault" >
+  <label class="form-check-label"  for="flexSwitchCheckDefault"> check if important task</label>
+ </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">add todo</button>
+</form>
+
+{{>footer}}
